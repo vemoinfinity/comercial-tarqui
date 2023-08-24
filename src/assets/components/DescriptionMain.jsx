@@ -1,8 +1,12 @@
 import React from 'react';
 import { Button, Card, Col, Container, NavLink, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import useContext from '../../context/useContext';
 const DescriptionMain = () => {
+  const {database:img}= useContext("whatsapp")
+  const {database:img1}= useContext("face")
+  const {database:img2}= useContext("insta")
+  const {database:img3}= useContext("iconubi")
   return (
     <Container className='my-5' >
       <Row>
@@ -13,21 +17,21 @@ const DescriptionMain = () => {
               <a href=''>
                 <button style={{ width: '80%' }} type="button"
                   className="btn btn-outline-primary m-3 ms-4">
-                  <img className='redes' src="./image\WhatsApp_icon.png" />
+                  <img className='redes' src={img} />
                   Whastapp
                 </button>
               </a>
               <a href='https://www.facebook.com/comercialtarquimanta'>
                 <button style={{ width: '80%' }} type="button"
                   className="btn btn-outline-primary m-3 ms-4">
-                  <img className='redes' src="./image\facebook-logo.png" />
+                  <img className='redes' src={img1} />
                   Facebook
                 </button>
               </a>
               <a href='https://www.instagram.com/comercial_tarqui/'>
                 <button style={{ width: '80%' }} type="button"
                   className="btn btn-outline-primary m-3 ms-4">
-                  <img className='redes' src="./image\Instagram-icon.png" />
+                  <img className='redes' src={img2} />
                   Instagram
                 </button>
               </a>
@@ -51,7 +55,7 @@ const DescriptionMain = () => {
                 <button style={{ width: '300px' }}
               type="submit"
               className="btn btn-outline-primary m-3 ms-4" >
-                <img className='redes' src="./image\icon-ubi.png" />Ubicaciones
+                <img className='redes' src={img3} />Ubicaciones
                 </button>
               </NavLink>
             </Card.Body>

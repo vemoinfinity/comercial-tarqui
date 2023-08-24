@@ -1,7 +1,12 @@
 import React from 'react';
 import { Col, Container, Figure, Row } from 'react-bootstrap';
-
+import useContext from "../../context/useContext";
 const MomentsDes = () => {
+  const {database:img}= useContext("1674165927256.JPG")
+  const {database:img1}= useContext("1674165927231.JPG")
+  const {database:img2}= useContext("1674165927189.JPG")
+  const {database:img3}= useContext("1674165927169.JPG")
+  const {database:img4}= useContext("1674165927131.JPG")
   return (
     <Container className='moments mt-3 '>
       <Row xs={1} lg={2}>
@@ -14,7 +19,7 @@ const MomentsDes = () => {
                   width={200}
                   height={200}
                   alt="171x180"
-                  src="./image\1674165927256.JPG"
+                  src={img}
                 />
               </Figure>
             </Col>
@@ -24,7 +29,7 @@ const MomentsDes = () => {
                   width={200}
                   height={200}
                   alt="171x180"
-                  src="./image\1674165927231.JPG"
+                  src={img1}
                 />
               </Figure>
             </Col>
@@ -39,7 +44,7 @@ const MomentsDes = () => {
                   width={100}
                   height={100}
                   alt="171x180"
-                  src="./image\1674165927189.JPG"
+                  src={img2}
                   />
               </Figure>             
             </Col>
@@ -49,7 +54,7 @@ const MomentsDes = () => {
                   width={100}
                   height={100}
                   alt="171x180"
-                  src="./image\1674165927169.JPG"
+                  src={img3}
                 />
               </Figure>            
             </Col>
@@ -59,7 +64,7 @@ const MomentsDes = () => {
                   width={100}
                   height={100}
                   alt="171x180"
-                  src="./image\1674165927131.JPG"
+                  src={img4}
                   />
               </Figure>
               </Col>

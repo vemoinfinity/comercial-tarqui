@@ -1,8 +1,12 @@
 import React from 'react';
 import { Col, Container, Figure, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import useContext from "../context/useContext";
 const Location = () => {
+  const {database:img}= useContext("ubi1")
+  const {database:img1}= useContext("ubi2")
+  const {database:img2}= useContext("iconubi")
+
   return (
     <Container>
       <Row>
@@ -13,7 +17,7 @@ const Location = () => {
               width='110%'
               height={300}
               alt="171x180"
-              src="./image\ubi-ct1.png"
+              src={img}
               className="rounded"
             />
           </Figure>
@@ -30,7 +34,7 @@ const Location = () => {
               style={{ width: '80%' }}
               type="submit"
               className="btn btn-outline-light m-3 ms-4" >
-              <img className='redes' src="./image\icon-ubi.png" />MAPS
+              <img className='redes' src={img2} />MAPS
             </button>
           </a>
         </Col>
@@ -43,7 +47,7 @@ const Location = () => {
               width='110%'
               height={300}
               alt="171x180"
-              src="./image\ubi-ct2.png"
+              src={img1}
               className="rounded"
             />
           </Figure>
@@ -58,7 +62,7 @@ const Location = () => {
           <a href='https://goo.gl/maps/wiQxAhnZC4pmbLEt9'>
             <button style={{ width: '80%' }} type="button"
               className="btn btn-outline-light m-3 ms-4">
-              <img className='redes' src="./image\icon-ubi.png" />MAPS
+              <img className='redes' src={img2}  />MAPS
             </button>
           </a>
         </Col>
